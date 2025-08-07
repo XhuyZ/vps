@@ -90,6 +90,7 @@
   ## --- Firewall ---
   networking.firewall.allowedTCPPorts = [ 22 ];
   networking.networkmanager.enable = true;
+  networking.wireless.enable = true;
 
   ## --- Sudo config ---
   security.sudo.extraRules = [
