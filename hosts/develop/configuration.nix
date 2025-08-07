@@ -67,7 +67,7 @@ users.users = {
   xhuyz = {
     isNormalUser = true;
     initialPassword = "<><>";
-    extraGroups = [ "wheel" ]; 
+    extraGroups = [ "wheel" "networkmanager" ]; 
     packages = [ inputs.home-manager.packages.${pkgs.system}.default ];
   };
 };
