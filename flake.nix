@@ -39,7 +39,7 @@
           modules = [ 
           ./hosts/develop 
           inputs.disko.nixosModules.disko
-          nixos-hardware.nixosModules.fx506hm
+          nixos-hardware.nixosModules.asus-fx506hm
           ];
         };
       };
