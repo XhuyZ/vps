@@ -5,10 +5,10 @@
     # here, NOT in environment.systemPackages
   ];
   programs.fish.enable = true;
-  programs.nh = {
-    enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "/home/xhuyz/nix-flake-templates/";
-  };
+  # programs.nh = {
+  #   enable = true;
+  #   clean.enable = true;
+  #   clean.extraArgs = "--keep-since 4d --keep 3";
+  #   flake = "/home/xhuyz/nix-flake-templates/";
+  # };
 }
