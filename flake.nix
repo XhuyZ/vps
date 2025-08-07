@@ -18,6 +18,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     disko.url = "github:nix-community/disko";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs = { self, home-manager, nixpkgs, ... }@inputs:
@@ -38,6 +39,7 @@
           modules = [ 
           ./hosts/develop 
           inputs.disko.nixosModules.disko
+          nixos-hardware.nixosModules.fx504gd
           ];
         };
       };
