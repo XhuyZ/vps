@@ -3,7 +3,7 @@
 # sudo nixos-generate-config --dir ./hosts/m3tam3re
 #
 # Please make sure to change the first couple of lines in your configuration.nix:
-{ config, inputs, ouputs, lib, pkgs, ... }:
+{ config, inputs, lib, pkgs, ... }:
 
 {
   imports = [ 
@@ -29,7 +29,7 @@ users.users = {
 home-manager = {
   useUserPackages = true;
   extraSpecialArgs = { inherit inputs outputs; };
-  users.m3tam3re =
+  users.xhuyz =
     import ../../home/xhuyz/${config.networking.hostname}.nix;
 };
 
