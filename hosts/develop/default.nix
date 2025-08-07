@@ -9,6 +9,11 @@
   imports = [ 
   # ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
+    ../common
+    ./configuration.nix
+    ./programs.nix
+    # ./secrets.nix
+    ./services
   ];
 
 # Moreover please update the packages option in your user configuration and add the home-manager options:
@@ -28,18 +33,7 @@ home-manager = {
     import ../../home/xhuyz/${config.networking.hostname}.nix;
 };
 
-# Please also change your hostname accordingly:
-#:w
 networking.hostName = "develop"; # Define your hostname.
-{
-  imports = [
-    ../common
-    ./configuration.nix
-    ./programs.nix
-    # ./secrets.nix
-    ./services
-  ];
-
   # extraServices = {
   #   flatpak.enable = false;
   #   ollama.enable = false;

@@ -62,6 +62,15 @@
   # };
   # security.rtkit.enable = true;
 
+#   ## --- User ---
+# users.users = {
+#   xhuyz = {
+#     isNormalUser = true;
+#     initialPassword = "<><>";
+#     extraGroups = [ "wheel" ]; 
+#     packages = [ inputs.home-manager.packages.${pkgs.system}.default ];
+#   };
+# };
 
   ## --- Unfree packages ---
   nixpkgs.config.allowUnfree = true;
