@@ -7,7 +7,6 @@
   ];
 
   ## --- Flake support ---
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   ## --- Bootloader (GRUB + UEFI only) ---
   boot.loader.grub = {
