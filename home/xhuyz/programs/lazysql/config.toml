@@ -1,0 +1,10 @@
+[[database]]
+Name = 'Local MySQL - Testnet'
+Provider = 'mysql'
+DBName = 'Testnet'
+URL = 'mysql://root:12345@localhost:3306/Testnet'
+
+[application]
+DefaultPageSize = 300
+DisableSidebar = false
+SidebarOverlay = false

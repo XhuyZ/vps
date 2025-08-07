@@ -1,24 +1,20 @@
 { config, lib, pkgs, ... }:
-
 {
   home.username = lib.mkDefault "xhuyz";
   home.homeDirectory = lib.mkDefault "/home/${config.home.username}";
-
-  home.stateVersion = "25.05"; # Please read the comment before changing.
-
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
-  home.packages = [
-  ];
-
+  home.stateVersion = "25.05"; 
   home.file = {
   };
 
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
   };
-
-  # Let Home Manager install and manage itself.
+    imports = [
+    ./programs/kitty/kitty.nix
+    ./programs/git.nix
+    ./programs/nushell/nushell.nix
+    ./packages/default.nix
+  ];
   programs.home-manager.enable = true;
 }
 
