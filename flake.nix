@@ -46,9 +46,8 @@
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
               home-manager.users.xhuyz = import ./home/xhuyz/develop.nix {
-              inherit inputs outputs;;
+              inherit inputs outputs;
             }
-          ];
         };
       };
     };
