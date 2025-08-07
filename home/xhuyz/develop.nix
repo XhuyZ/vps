@@ -3,7 +3,7 @@
 {
   imports = [
     ./home.nix
-    ../common/
+    ../common/default.nix
   ];
 
   home.username = "xhuyz";
