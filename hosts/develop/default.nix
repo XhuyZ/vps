@@ -28,7 +28,7 @@ users.users = {
 
 home-manager = {
   useUserPackages = true;
-  extraSpecialArgs = { inherit inputs outputs; };
+  extraSpecialArgs = { inherit inputs; };
   users.xhuyz =
     import ../../home/xhuyz/${config.networking.hostname}.nix;
 };
