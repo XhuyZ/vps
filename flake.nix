@@ -21,7 +21,7 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = { self, home-manager, nixpkgs, ... }@inputs:
+  outputs = { self, home-manager, nixpkgs, nixos-hardware, ... }@inputs:
     let
       inherit (self) outputs;
       systems = [
