@@ -30,7 +30,7 @@ home-manager = {
   useUserPackages = true;
   extraSpecialArgs = { inherit inputs; };
   users.xhuyz =
-    import ../../home/xhuyz/${config.networking.hostname}.nix;
+    import ../../home/xhuyz/${config.networking.hostName}.nix;
 };
 
 networking.hostName = "develop"; # Define your hostname.
