@@ -15,6 +15,7 @@
             esp = {
               size = "512M";
               type = "EF00";
+              lable = "ESP"
               content = {
                 type = "filesystem";
                 format = "vfat";
