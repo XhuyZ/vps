@@ -89,6 +89,7 @@
 
   ## --- Firewall ---
   networking.firewall.allowedTCPPorts = [ 22 ];
+  networking.networkmanager.enable = true;
 
   ## --- Sudo config ---
   security.sudo.extraRules = [
