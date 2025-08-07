@@ -1,28 +1,32 @@
-{pkgs, config,...}: {
+{ config, pkgs, ... }:
+
+{
   imports = [
-    # Include the results of the hardware scan.
-    ./disko-config.nix
     # ./hardware-configuration.nix
+    ./disko-config.nix
   ];
 
-  # Bootloader.
+  ## --- Flake support ---
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  ## --- Bootloader (GRUB + UEFI only) ---
   boot.loader.grub = {
-  enable = true;
-  efiSupport = true;
-  devices = [ "nodev" ];
-  efiInstallAsRemovable = true;  };
-  networking.hostName = "develop"; # CHANGE ME.
-  # networking.hostId = ""; # CHANGE ME
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable =
-    true; # Easiest to use and most distros use this by default.
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-  # Select internationalisation properties.
-  # Set your time zone.
+    enable = true;
+    efiSupport = true;
+    devices = [ "nodev" ]; # tốt cho remote
+    efiInstallAsRemovable = true; # đặt file ở EFI/BOOT/BOOTX64.EFI
+  };
+  boot.loader.efi.canTouchEfiVariables = false;
+  boot.loader.systemd-boot.enable = false;
+
+  ## --- Kernel ---
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  ## --- Host & Time ---
+  networking.hostName = "develop";
   time.timeZone = "Asia/Ho_Chi_Minh";
+
+  ## --- Locale ---
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "vi_VN";
@@ -35,44 +39,68 @@
     LC_TELEPHONE = "vi_VN";
     LC_TIME = "vi_VN";
   };
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
-  # Enable the X11 windowing system.
+
+  ## --- Networking ---
+  networking.networkmanager.enable = true;
+
+  ## --- GUI: GNOME Desktop ---
   services.xserver.enable = true;
-  # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
-  # Enable CUPS to print documents.
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+  };
+
+  ## --- Printing ---
   # services.printing.enable = true;
-  # Enable sound.
-  # hardware.pulseaudio.enable = true;
-  # OR
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [neovim git neofetch];
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
+
+  ## --- Sound (PipeWire) ---
+  # services.pulseaudio.enable = false;
+  # services.pipewire = {
   #   enable = true;
-  #   enableSSHSupport = true;
+  #   alsa.enable = true;
+  #   alsa.support32Bit = true;
+  #   pulse.enable = true;
+  #   # jack.enable = true;
   # };
-  # List services that you want to enable:
-  # Enable the OpenSSH daemon.
+  # security.rtkit.enable = true;
+
+  ## --- User ---
+  users.users.xhuyz = {
+    isNormalUser = true;
+    description = "xhuyz";
+    extraGroups = [ "networkmanager" "wheel" ];
+    packages = with pkgs; [ ];
+  };
+
+  ## --- Unfree packages ---
+  nixpkgs.config.allowUnfree = true;
+
+  ## --- System packages ---
+  environment.systemPackages = with pkgs; [
+    neovim
+    git
+    neofetch
+  ];
+
+  ## --- SSH ---
   services.openssh = {
     enable = true;
-    settings.PermitRootLogin = "no";
+    settings.PermitRootLogin = "yes";
   };
-  # [[Open ports in the firewall.
+
+  ## --- Firewall ---
   networking.firewall.allowedTCPPorts = [ 22 ];
-  system.stateVersion = "25.05"; # Did you read the comment?
+
+  ## --- Sudo config ---
+  security.sudo.extraRules = [
+    {
+      groups = [ "sudo" ];
+      commands = [ "ALL" ];
+    }
+  ];
+
+  ## --- Required for upgrades ---
+  system.stateVersion = "25.05";
 }
