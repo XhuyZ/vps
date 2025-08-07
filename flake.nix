@@ -40,14 +40,14 @@
           ./hosts/develop 
           inputs.disko.nixosModules.disko
           nixos-hardware.nixosModules.asus-fx506hm
+          home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.xhuyz = import ./home/xhuyz/develop.nix;
+              home-manager.backupFileExtension = "backup";
+            }
           ];
-        };
-      };
-      homeConfigurations = {
-        "xhuyz@develop" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages."x86_64-linux";
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./home/xhuyz/develop.nix ];
         };
       };
     };
