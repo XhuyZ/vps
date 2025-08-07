@@ -62,13 +62,6 @@
   # };
   # security.rtkit.enable = true;
 
-  ## --- User ---
-  users.users.xhuyz = {
-    isNormalUser = true;
-    description = "xhuyz";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [ ];
-  };
 
   ## --- Unfree packages ---
   nixpkgs.config.allowUnfree = true;
