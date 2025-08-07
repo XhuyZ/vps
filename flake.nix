@@ -32,7 +32,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
-              home-manager.users.xhuyz = import ./home/xhuyz/develop.nix 
+              home-manager.users.xhuyz = import ./home/xhuyz/develop.nix;
             }
           ];
         };
