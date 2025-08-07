@@ -44,9 +44,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.xhuyz = import ./home/xhuyz/develop.nix {
-                inherit inputs outputs;
-              };
+              home-manager.users.xhuyz = import ./home/xhuyz/develop.nix;
               home-manager.backupFileExtension = "backup";
             }
           ];
