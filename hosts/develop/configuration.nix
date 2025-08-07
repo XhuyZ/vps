@@ -40,7 +40,7 @@
   networking.networkmanager.enable = true;
 
   ## --- GUI: GNOME Desktop ---
-  services.services.xserver = {
+  services.xserver = {
     enable = true;  
     displayManager.gdm = {
       enable = true;  
