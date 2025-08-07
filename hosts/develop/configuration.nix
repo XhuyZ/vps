@@ -7,9 +7,10 @@
 
   # Bootloader.
   boot.loader.grub = {
-    efiSupport = true;
-    efiInstallAsRemovable = true;
-  };
+  enable = true;
+  efiSupport = true;
+  devices = [ "nodev" ];
+  efiInstallAsRemovable = true;  };
   networking.hostName = "develop"; # CHANGE ME.
   # networking.hostId = ""; # CHANGE ME
   # Pick only one of the below networking options.
