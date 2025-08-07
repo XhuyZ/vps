@@ -16,9 +16,6 @@
     devices = [ "nodev" ]; # tốt cho remote
     efiInstallAsRemovable = true; # đặt file ở EFI/BOOT/BOOTX64.EFI
   };
-  boot.loader.efi.canTouchEfiVariables = false;
-  boot.loader.systemd-boot.enable = false;
-
   ## --- Kernel ---
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
