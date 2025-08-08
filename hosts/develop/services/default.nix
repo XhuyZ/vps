@@ -5,6 +5,6 @@
     ./mysql.nix
     ./podman.nix
     ./virtualisation.nix
-    ./traefik.nix
+    # ./traefik.nix
   ];
 }
