@@ -40,7 +40,6 @@ in {
       ./plugins/yazi.nix
       ./plugins/zen-mode.nix
       ];
-      programs.nixvim.enable = true;
     };
   };
 }
