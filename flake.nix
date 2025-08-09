@@ -46,7 +46,6 @@
           extraSpecialArgs = { inherit inputs outputs nixvim; };
           hostname = "develop";
           modules = [ 
-          inputs.nixvim.homeManagerModules.nixvim 
           ./home/xhuyz/develop.nix
           ];
         };
