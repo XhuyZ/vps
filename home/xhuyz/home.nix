@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-  home.stateVersion = "25.05"; 
+  # home.stateVersion = "25.05"; 
   home.file = {
   };
   home.username = lib.mkDefault "xhuyz";
