@@ -71,6 +71,13 @@ users.users = {
     packages = [ inputs.home-manager.packages.${pkgs.system}.default ];
   };
 };
+home-manager = {
+  useUserPackages = true;
+  extraSpecialArgs = { inherit inputs outputs; };
+  users.m3tam3re =
+    import ../../home/xhuyz/${config.networking.hostName}.nix;
+};
+
 
   ## --- Unfree packages ---
   nixpkgs.config.allowUnfree = true;

@@ -12,26 +12,21 @@
 #   ];
 #   ...
 #
-# Moreover please update the packages option in your user configuration and add the home-manager options:
-# users.users = {
-#   m3tam3re = {
-#     isNormalUser = true;
-#     initialPassword = "12345";
-#     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-#     packages = [ inputs.home-manager.packages.${pkgs.system}.default ];
-#   };
-# };
-#
-# home-manager = {
-#   useUserPackages = true;
-#   extraSpecialArgs = { inherit inputs outputs; };
-#   users.m3tam3re =
-#     import ../../home/m3tam3re/${config.networking.hostName}.nix;
-# };
-#
-# Please also change your hostname accordingly:
-#:w
-# networking.hostName = "nixos"; # Define your hostname.
+#   ## --- User ---
+users.users = {
+  xhuyz = {
+    isNormalUser = true;
+    initialPassword = "<><>";
+    extraGroups = [ "wheel" "networkmanager" ]; 
+    packages = [ inputs.home-manager.packages.${pkgs.system}.default ];
+  };
+};
+home-manager = {
+  useUserPackages = true;
+  extraSpecialArgs = { inherit inputs outputs; };
+  users.m3tam3re =
+    import ../../home/xhuyz/${config.networking.hostName}.nix;
+};
 {
   imports = [
     ../common
