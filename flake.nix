@@ -11,7 +11,7 @@
     # nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     disko.url = "github:nix-community/disko";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    nixvim.url = "github:XhuyZ/nixvim";
+    nixvim.url = "github:nix-community/nixvim";
   };
   outputs = { self, home-manager, nixpkgs, nixos-hardware, nixvim, ... }@inputs:
     let
@@ -33,6 +33,13 @@
           inputs.disko.nixosModules.disko
           nixos-hardware.nixosModules.asus-fx506hm
           inputs.home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true
+            home-manager.sharedModules = [
+            nixvim.homeManagerModules.nixvim
+            ];
+          }
           ];
         };
       };
