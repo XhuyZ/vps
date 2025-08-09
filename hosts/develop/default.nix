@@ -12,21 +12,6 @@
 #   ];
 #   ...
 #
-#   ## --- User ---
-users.users = {
-  xhuyz = {
-    isNormalUser = true;
-    initialPassword = "<><>";
-    extraGroups = [ "wheel" "networkmanager" ]; 
-    packages = [ inputs.home-manager.packages.${pkgs.system}.default ];
-  };
-};
-home-manager = {
-  useUserPackages = true;
-  extraSpecialArgs = { inherit inputs outputs; };
-  users.m3tam3re =
-    import ../../home/xhuyz/${config.networking.hostName}.nix;
-};
 {
   imports = [
     ../common
