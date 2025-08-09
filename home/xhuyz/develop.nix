@@ -15,7 +15,7 @@
     };
     wm = {
       office.enable = true;
-    }
+    };
   };
 
 }
