@@ -1,6 +1,5 @@
 {
   imports = [
-   nixvim.homeManagerModules.nixvim
     ../common
     ../features/programs
     ../features/packages
