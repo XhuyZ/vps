@@ -18,10 +18,6 @@ in {
       ./lsp/lsp.nix
       ./lsp/roslyn.nix
     ];
-
-    programs.nixvim = {
-      enable = true;
-    };
   };
 }
 
