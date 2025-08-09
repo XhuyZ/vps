@@ -1,12 +1,11 @@
-{ config, lib, pkgs, inputs, ... }:
-with lib;
+{ config, lib, pkgs, ... }:
 let
   cfg = config.features.programs.nixvim;
 in {
   options.features.programs.nixvim.enable =
-    mkEnableOption "Enable NixVim configuration";
+    lib.mkEnableOption "Enable NixVim configuration";
 
-  config = mkIf cfg.enable {
+  config = lib.mkIf cfg.enable {
     programs.nixvim = {
       enable = true;
       imports = [
