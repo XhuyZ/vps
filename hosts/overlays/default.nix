@@ -12,7 +12,7 @@
       # });
     };
   nixvim-overlay = final: prev: {
-    my-neovim = inputs.my-nixvim.packages.${system}.default;
+    my-neovim = inputs.my-nixvim.packages.${prev.system}.default;
   };
   stable-packages = final: _prev: {
     stable = import inputs.nixpkgs {
