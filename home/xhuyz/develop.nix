@@ -6,7 +6,6 @@
     ../features/wm
     ./home.nix
   ];
-  home.stateVersion = "25.05"; 
 
   features = {
     programs = {
