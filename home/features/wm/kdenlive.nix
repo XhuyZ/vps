@@ -5,10 +5,10 @@
   ...
 }:
 with lib; let
-  cfg = config.features.wm.office;
+  cfg = config.features.wm.kdenlive;
 in {
-  options.features.wm.office.enable =
-    mkEnableOption "install office and paperwork stuff";
+  options.features.wm.kdenlive.enable =
+    mkEnableOption "Video Editing App";
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [

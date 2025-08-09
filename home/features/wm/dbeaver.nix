@@ -5,10 +5,10 @@
   ...
 }:
 with lib; let
-  cfg = config.features.wm.office;
+  cfg = config.features.wm.dbeaver;
 in {
-  options.features.wm.office.enable =
-    mkEnableOption "install office and paperwork stuff";
+  options.features.wm.dbeaver.enable =
+    mkEnableOption "Dbeaver database client";
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
