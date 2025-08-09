@@ -3,17 +3,13 @@
   home.stateVersion = "25.05"; 
   home.file = {
   };
+  home.username = lib.mkDefault "xhuyz";
+  home.homeDirectory = lib.mkDefault "/home/${config.home.username}";
+
 
   home.sessionVariables = {
     EDITOR = "nvim";
   };
-    imports = [
-    ./programs/kitty/kitty.nix
-    ./programs/lazysql/lazysql.nix
-    ./programs/git.nix
-    ./programs/nushell/nushell.nix
-    ./packages/default.nix
-  ];
   programs.home-manager.enable = true;
 }
 
