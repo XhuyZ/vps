@@ -74,7 +74,7 @@ users.users = {
 home-manager = {
   useUserPackages = true;
   extraSpecialArgs = { inherit inputs outputs; };
-  users.m3tam3re =
+  users.xhuyz =
     import ../../home/xhuyz/${config.networking.hostName}.nix;
 };
 
