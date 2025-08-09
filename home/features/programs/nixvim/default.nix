@@ -1,5 +1,7 @@
 { config, lib, pkgs, inputs, ... }:
+
 with lib;
+
 let
   cfg = config.features.programs.nixvim;
 in {
@@ -7,16 +9,18 @@ in {
     mkEnableOption "Enable NixVim configuration";
 
   config = mkIf cfg.enable {
-    programs.nixvim = {
-      enable = true;
-      imports = [
+    imports = [
+      inputs.nixvim.homeManagerModules.nixvim
+
       ./plugins/default.nix
       ./lsp/conform.nix
       ./lsp/fidget.nix
       ./lsp/lsp.nix
       ./lsp/roslyn.nix
-      inputs.nixvim.homeManagerModules.nixvim
-      ];
+    ];
+
+    programs.nixvim = {
+      enable = true;
     };
   };
 }
