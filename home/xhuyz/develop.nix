@@ -21,6 +21,10 @@
     };
     wm = {
       office.enable = true;
+      blender.enable = true;
+      kdenlive.enable = true;
+      dbeaver.enable = true;
+      obs.enable = true;
     };
   };
 }
