@@ -6,7 +6,8 @@ in {
     lib.mkEnableOption "Enable NixVim configuration";
     
   config = lib.mkIf cfg.enable {
-  }home.packages = [ 
+  home.packages = [ 
       inputs.nixvim-config.packages.${pkgs.system}.default 
     ];;
+  };
 }
