@@ -44,8 +44,8 @@
           pkgs = nixpkgs.legacyPackages."x86_64-linux";
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [ 
-            ./home/xhuyz/develop.nix
             nixvim.homeManagerModules.nixvim  
+            ./home/xhuyz/develop.nix
           ];
         };
       };
