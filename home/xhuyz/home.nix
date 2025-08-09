@@ -10,7 +10,7 @@ in
 {
   imports = [
   nixvim.homeManagerModules.nixvim
-  ]
+  ];
   home.stateVersion = "25.05"; 
   home.file = {
   };
