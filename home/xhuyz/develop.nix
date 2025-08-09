@@ -12,6 +12,7 @@
       nushell.enable = true;
       starship.enable = true;
       kitty.enable = true;
+      nixvim.enable = true;
       # lazysql.enable = true;
       # libreoffice-fresh.enable = true;
     };
