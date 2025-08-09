@@ -1,8 +1,5 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, ... }:
 {
-  imports = [
-    nixvim.homeManagerModules.nixvim
-    ];
   home.stateVersion = "25.05"; 
   home.file = {
   };
@@ -14,5 +11,6 @@
     EDITOR = "nvim";
   };
   programs.home-manager.enable = true;
+  programs.nixvim.enable = true;
 }
 
