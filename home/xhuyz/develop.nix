@@ -1,7 +1,7 @@
 {
   imports = [
     ../common
-    ../features/
+    ../features/programs/
     ../features/packages/
     ../features/wm/
   ];
