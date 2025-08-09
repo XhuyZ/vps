@@ -1,9 +1,9 @@
 {
   imports = [
     ../common
-    ../features/programs/
-    ../features/packages/
-    ../features/wm/
+    ../features/programs
+    ../features/packages
+    ../features/wm
   ];
 
   features = {
