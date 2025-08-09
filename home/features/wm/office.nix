@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.features.wm.office;
 in {
-  options.features.desktop.wm.enable =
+  options.features.wm.office.enable =
     mkEnableOption "install office and paperwork stuff";
 
   config = mkIf cfg.enable {
