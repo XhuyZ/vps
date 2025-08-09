@@ -40,7 +40,7 @@
             home-manager.sharedModules = [
             nixvim.homeManagerModules.nixvim
             ];
-          }
+          };
           ];
         };
       };
