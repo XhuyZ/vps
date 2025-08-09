@@ -1,12 +1,17 @@
-{ config, pkgs, lib, inputs, outputs, ... }:
-
 {
   imports = [
-    ./home.nix
-    ../common/default.nix
+    ../common
+    ../features/
+    ../features/packages/
   ];
 
-  home.username = "xhuyz";
-  home.homeDirectory = "/home/xhuyz";
+  features = {
+    programs = {
+      kitty.enable = true;
+      nushell.enable = true;
+      starship.enable = true;
+      lazysql.enable = true;
+    };
+  };
 }
 

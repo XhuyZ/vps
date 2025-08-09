@@ -1,6 +1,5 @@
-{ pkgs, ... }:
-{
-  home.packages = [
+{pkgs, ...}: {
+  home.packages = with pkgs; [
     pkgs.neofetch
     pkgs.fastfetch
     pkgs.pfetch
@@ -20,4 +19,5 @@
     pkgs.lazysql
   ];
 }
+
 
