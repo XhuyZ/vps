@@ -1,16 +1,5 @@
 { config, lib, pkgs, ... }:
-let
-  nixvim = import (
-    builtins.fetchGit {
-      url = "https://github.com/nix-community/nixvim";
-      ref = "main";
-    }
-  );
-in
 {
-  imports = [
-  nixvim.homeManagerModules.nixvim
-  ];
   home.stateVersion = "25.05"; 
   home.file = {
   };
