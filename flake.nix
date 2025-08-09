@@ -11,8 +11,9 @@
     # nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     disko.url = "github:nix-community/disko";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixvim.url = "github:XhuyZ/nixvim";
   };
-  outputs = { self, home-manager, nixpkgs, nixos-hardware, ... }@inputs:
+  outputs = { self, home-manager, nixpkgs, nixos-hardware, nixvim, ... }@inputs:
     let
       inherit (self) outputs;
       systems = [
