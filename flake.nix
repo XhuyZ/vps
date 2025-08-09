@@ -32,7 +32,7 @@
           modules = [ 
           ./hosts/develop 
           inputs.disko.nixosModules.disko
-          nixos-hardware.nixosModules.asus-fx506hm
+          nixos-hardware.nixosModules.asus-fx504gd
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager.sharedModules = [
