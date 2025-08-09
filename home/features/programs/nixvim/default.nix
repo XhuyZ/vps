@@ -7,21 +7,16 @@ in {
     mkEnableOption "Enable NixVim configuration";
 
   config = mkIf cfg.enable {
-    home-manager.sharedModules = [
-      inputs.nixvim.homeManagerModules.nixvim
-      {
-        programs.nixvim = {
-          enable = true;
-          imports = [
-            ./plugins/default.nix
-            ./lsp/conform.nix
-            ./lsp/fidget.nix
-            ./lsp/lsp.nix
-            ./lsp/roslyn.nix
-          ];
-        };
-      }
-    ];
+    programs.nixvim = {
+      enable = true;
+      imports = [
+        ./plugins/default.nix
+        ./lsp/conform.nix
+        ./lsp/fidget.nix
+        ./lsp/lsp.nix
+        ./lsp/roslyn.nix
+      ];
+    };
   };
 }
 
