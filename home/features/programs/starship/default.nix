@@ -4,7 +4,7 @@
   ...
 }:
 with lib; let
-  cfg = config.features.cli.starship;
+  cfg = config.features.programs.starship;
 in {
   options.features.programs.starship.enable = mkEnableOption "enable starship prompt";
 
