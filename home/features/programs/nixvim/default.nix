@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 let
   cfg = config.features.programs.nixvim;
 in {
@@ -6,6 +6,7 @@ in {
     lib.mkEnableOption "Enable NixVim configuration";
     
   config = lib.mkIf cfg.enable {
-    home.packages = [ nixvim-pkg ];
-  };
+  }home.packages = [ 
+      inputs.nixvim-config.packages.${pkgs.system}.default 
+    ];;
 }
