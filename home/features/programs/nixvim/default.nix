@@ -15,6 +15,7 @@ in {
       ./lsp/fidget.nix
       ./lsp/lsp.nix
       ./lsp/roslyn.nix
+      inputs.nixvim.homeManagerModules.nixvim
       ];
     };
   };
