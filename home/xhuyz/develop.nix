@@ -4,6 +4,7 @@
     ../features/programs
     ../features/packages
     ../features/wm
+    ./home.nix
   ];
 
   features = {
