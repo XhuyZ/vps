@@ -13,10 +13,10 @@
       starship.enable = true;
       kitty.enable = true;
     };
-  };
-  wm = {
+    wm = {
       office.enable = true;
-};
+    }
+  };
 
 }
 
