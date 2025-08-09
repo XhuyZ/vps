@@ -9,11 +9,11 @@
 
   features = {
     programs = {
-      kitty.enable = true;
       nushell.enable = true;
       starship.enable = true;
-      lazysql.enable = true;
-      libreoffice-fresh.enable = true;
+      kitty.enable = true;
+      # lazysql.enable = true;
+      # libreoffice-fresh.enable = true;
     };
   };
 }
