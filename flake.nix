@@ -43,7 +43,7 @@
           inputs.disko.nixosModules.disko
           nixos-hardware.nixosModules.asus-fx506hm
           inputs.home-manager.nixosModules.home-manager
-          inputs.nixivm.nixosModules.nixvim
+          inputs.nixvim.nixosModules.nixvim
           ];
         };
       };
