@@ -2,7 +2,6 @@
   description = ''
   XhuyZ
   '';
-
   inputs = {
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -12,10 +11,11 @@
     # nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     disko.url = "github:nix-community/disko";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    nixvim.url = "github:nix-community/nixvim";
-
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-
   outputs = { self, home-manager, nixpkgs, nixos-hardware, nixvim, ... }@inputs:
     let
       inherit (self) outputs;
@@ -42,13 +42,12 @@
       homeConfigurations = {
         "xhuyz@develop" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages."x86_64-linux";
-          extraSpecialArgs = { inherit inputs outputs nixvim; };
-          hostname = "develop";
+          extraSpecialArgs = { inherit inputs outputs; };
           modules = [ 
-          ./home/xhuyz/develop.nix
+            ./home/xhuyz/develop.nix
+            nixvim.homeManagerModules.nixvim  
           ];
         };
       };
     };
 }
-
