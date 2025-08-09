@@ -1,5 +1,8 @@
 { config, lib, pkgs, ... }:
 {
+  imports = {
+    nixvim.homeManagerModules.nixvim
+    };
   home.stateVersion = "25.05"; 
   home.file = {
   };

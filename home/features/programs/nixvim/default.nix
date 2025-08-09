@@ -9,7 +9,6 @@ in {
     programs.nixvim = {
       enable = true;
       imports = [
-        nixvim.homeManagerModules.nixvim
         ./plugins/default.nix
         ./lsp/conform.nix
         ./lsp/fidget.nix
