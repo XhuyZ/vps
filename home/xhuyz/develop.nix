@@ -1,3 +1,4 @@
+{ config, pkgs, lib, inputs, outputs, ... }:
 {
   imports = [
     ../common
@@ -6,6 +7,7 @@
     ../features/wm
     ./home.nix
   ];
+
   nixpkgs.overlays = [
     outputs.overlays.nixvim-overlay
   ];
@@ -21,6 +23,5 @@
       office.enable = true;
     };
   };
-
 }
 
