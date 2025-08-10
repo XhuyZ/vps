@@ -13,7 +13,7 @@ in {
       enable = true;
       extensions = [
        pkgs.gh-eco
-      ]
+      ];
     };
   };
 }
