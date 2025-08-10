@@ -89,7 +89,7 @@ home-manager = {
 
   ## --- System packages ---
   environment.systemPackages = with pkgs; [
-    neovim
+    my-nixvim.packages.${system}.default
     git
     neofetch
   ];
