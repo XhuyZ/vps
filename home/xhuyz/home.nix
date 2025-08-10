@@ -11,5 +11,9 @@
     EDITOR = "nvim";
   };
   programs.home-manager.enable = true;
+  programs.neovim = {
+          enable = true;
+          package = inputs.my-nixvim.packages."system".default;
+        };
 }
 
