@@ -1,4 +1,4 @@
-{pkgs, my-nixvim, system,  ...}: {
+{pkgs, my-nixvim, system, inputs,  ...}: {
   home.packages = with pkgs; [
     pkgs.neofetch
     pkgs.fastfetch
