@@ -11,9 +11,9 @@
     disko.url = "github:nix-community/disko";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nixvim.url = "github:nix-community/nixvim";
-    my-nixvim.url = "github:XhuyZ/nixvim";
+    xhuyz-nixvim.url = "github:XhuyZ/nixvim";
   };
-  outputs = { self, home-manager, nixpkgs, nixos-hardware, nixvim, my-nixvim, ... }@inputs:
+  outputs = { self, home-manager, nixpkgs, nixos-hardware, nixvim, xhuyz-nixvim, ... }@inputs:
     let
       inherit (self) outputs;
       systems = [
