@@ -5,8 +5,6 @@
   };
   home.username = lib.mkDefault "xhuyz";
   home.homeDirectory = lib.mkDefault "/home/${config.home.username}";
-
-
   home.sessionVariables = {
     EDITOR = "nvim";
   };
