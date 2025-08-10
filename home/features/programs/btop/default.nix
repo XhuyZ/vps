@@ -6,7 +6,7 @@
 with lib; let
   cfg = config.features.programs.btop;
 in {
-  options.features.programs.starship.enable = mkEnableOption "enable btop";
+  options.features.programs.btop.enable = mkEnableOption "enable btop";
 
   config = mkIf cfg.enable {
     config = mkIf cfg.enable {
