@@ -1,16 +1,11 @@
-{ config, pkgs, inputs, lib, ... }:
+{ config, lib, pkgs, ... }:
 let
   cfg = config.features.programs.nixvim;
 in {
-  imports = [
-    inputs.nixvim.homeModules.nixvim
-  ];
-
   options.features.programs.nixvim.enable =
     lib.mkEnableOption "Enable NixVim configuration";
-
+    
   config = lib.mkIf cfg.enable {
-    programs.nixvim.enable = true;
+    home.packages = [ nixvim ];
   };
 }
-

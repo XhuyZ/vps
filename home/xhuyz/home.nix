@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs,  ... }:
+{ config, lib, pkgs, ... }:
 {
   home.stateVersion = "25.05"; 
   home.file = {
@@ -11,9 +11,5 @@
     EDITOR = "nvim";
   };
   programs.home-manager.enable = true;
-programs.neovim = {
-  enable = true;
-  package = inputs.my-nixvim.packages.${pkgs.stdenv.hostPlatform.system}.default;
-};
 }
 
