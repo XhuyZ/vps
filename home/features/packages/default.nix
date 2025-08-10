@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, my-nixvim, system,  ...}: {
   home.packages = with pkgs; [
     pkgs.neofetch
     pkgs.fastfetch
@@ -19,7 +19,6 @@
     pkgs.lazysql
     pkgs.dbeaver-bin
     my-nixvim.packages.${system}.default
-
   ];
 }
 
