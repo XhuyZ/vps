@@ -46,7 +46,6 @@
           modules = [
              nixvim.homeModules.nixvim
             ./home/xhuyz/develop.nix
-            my-nixvim.homeManagerModules.default
           ];
         };
       };
