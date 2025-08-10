@@ -8,7 +8,7 @@ in {
   config = lib.mkIf cfg.enable {
   programs.neovim = {
   enable = true;
-  package = pkgs.my-neovim;
+  package = pkgs.nvim;
 };
   };
 }
