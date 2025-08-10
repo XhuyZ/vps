@@ -18,6 +18,7 @@
       btop.enable = true;
       jq.enable = true;
       lazydocker.enable = true;
+      k9s.enable = true;
     };
     wm = {
       office.enable = true;

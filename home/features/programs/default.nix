@@ -9,6 +9,7 @@
   ./btop/default.nix
   ./jq/default.nix
   ./lazydocker/default.nix
+  ./k9s/default.nix
   ];
 }
 
