@@ -74,7 +74,7 @@ in {
           method = "pulse";
           source = "auto";
         };
-      }
+      };
     };
   };
 }
