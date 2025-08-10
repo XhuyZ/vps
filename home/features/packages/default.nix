@@ -5,6 +5,7 @@
     pkgs.pfetch
     pkgs.htop
     pkgs.btop
+    pkgs.neovim
     pkgs.git
     pkgs.vim
     pkgs.cava
