@@ -13,6 +13,7 @@
       starship.enable = true;
       kitty.enable = true;
       fastfetch.enable = true;
+      gh.enable = true;
     };
     wm = {
       office.enable = true;
