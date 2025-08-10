@@ -8,6 +8,8 @@
   home.sessionVariables = {
     EDITOR = "nvim";
   };
+  home-manager.backupFileExtension = "backup";
+
   programs.home-manager.enable = true;
   programs.bash.shellAliases = {
     nvim = "${inputs.my-nixvim.packages.${pkgs.system}.default}/bin/nvim";
