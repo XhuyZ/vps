@@ -95,6 +95,8 @@
             inputs.disko.nixosModules.disko
             nixos-hardware.nixosModules.asus-fx504gd
             inputs.home-manager.nixosModules.home-manager
+            # Import nixvim module cho home-manager trong NixOS
+            inputs.nixvim.homeModules.nixvim
           ];
         };
       };
