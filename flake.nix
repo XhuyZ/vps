@@ -41,7 +41,7 @@
           pkgs = nixpkgs.legacyPackages."x86_64-linux";
           extraSpecialArgs = {
             inherit inputs outputs;
-            inherit my-nixvim; 
+            inherit (inputs) my-nixvim;
             system = "x86_64-linux"; 
             }; 
           modules = [
