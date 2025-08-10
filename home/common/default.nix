@@ -3,7 +3,6 @@
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
-      outputs.overlays.stable-packages
       outputs.overlays.nixvim-overlay      
 
     ];
