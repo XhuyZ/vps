@@ -44,7 +44,7 @@
             system = "x86_64-linux"; 
             }; 
           modules = [
-             inputs.my-nixvim.homeModules.nixvim
+             nixvim.homeModules.nixvim
             ./home/xhuyz/develop.nix
           ];
         };
