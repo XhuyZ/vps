@@ -4,11 +4,11 @@
     # pkgs.fastfetch
     pkgs.pfetch
     pkgs.htop
-    pkgs.btop
+    # pkgs.btop
     pkgs.neovim
     pkgs.git
     pkgs.vim
-    pkgs.cava
+    # pkgs.cava
     pkgs.cmatrix
     pkgs.fzf
     pkgs.nushell
