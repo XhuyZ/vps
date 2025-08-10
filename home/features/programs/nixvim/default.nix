@@ -6,6 +6,9 @@ in {
     lib.mkEnableOption "Enable NixVim configuration";
     
   config = lib.mkIf cfg.enable {
+  home.packages = [ 
+      pkgs.my-neovim
+    ];
   };
 }
 

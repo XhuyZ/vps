@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, outputs,nixvim , ... }:
+{ config, pkgs, lib, inputs, outputs, ... }:
 {
   imports = [
     ../common
@@ -7,7 +7,6 @@
     ../features/wm
     ./home.nix
   ];
-  programs.nixvim.enable = true;
   features = {
     programs = {
       nushell.enable = true;
