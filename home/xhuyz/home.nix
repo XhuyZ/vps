@@ -11,7 +11,5 @@
     EDITOR = "nvim";
   };
   programs.home-manager.enable = true;
-programs.nixvim = {
-        enable = true;
-      } // (import "${inputs.my-nixvim}/config");}
+}
 

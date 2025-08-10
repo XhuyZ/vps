@@ -12,14 +12,7 @@
 
   # Overlay for nixvim with description fallback
 nixvim-overlay = final: prev: {
-  my-neovim = inputs.my-nixvim.packages.${prev.system}.default.overrideAttrs (old: {
-    meta = old.meta or {} // {
-      description = "My custom NixVim build";
-      license = prev.lib.licenses.mit;
-      maintainers = [ ];
-      platforms = prev.lib.platforms.all;
-    };
-  });
+  my-neovim = inputs.my-nixvim.packages.${prev.system}.default
 };
 
   # Stable package set
