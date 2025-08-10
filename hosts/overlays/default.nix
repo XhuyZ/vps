@@ -9,7 +9,7 @@
     #   ...
     # });
   };
-  snixvim-overlay = final: prev: {
+  nixvim-overlay = final: prev: {
     my-nixvim = inputs.my-nixvim.packages.${prev.system}.default.overrideAttrs (oldAttrs: {
       meta = (oldAttrs.meta or {}) // {
         description = "Neovim configured with nixvim";
