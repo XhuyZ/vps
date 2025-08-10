@@ -12,7 +12,6 @@
       nushell.enable = true;
       starship.enable = true;
       kitty.enable = true;
-      neovim.enable = true;
     };
     wm = {
       office.enable = true;
