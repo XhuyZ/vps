@@ -17,6 +17,7 @@
       cava.enable = true;
       btop.enable = true;
       jq.enable = true;
+      lazydocker.enable = true;
     };
     wm = {
       office.enable = true;

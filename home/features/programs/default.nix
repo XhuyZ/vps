@@ -8,6 +8,7 @@
   ./cava/default.nix
   ./btop/default.nix
   ./jq/default.nix
+  ./lazydocker/default.nix
   ];
 }
 
