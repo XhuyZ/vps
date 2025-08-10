@@ -18,7 +18,7 @@
     pkgs.starship
     pkgs.lazysql
     pkgs.dbeaver-bin
-    inputs.my-nixvim.packages.${pkgs.system}.default;
+    inputs.my-nixvim.packages.${pkgs.system}.default
     ]
 }
 
