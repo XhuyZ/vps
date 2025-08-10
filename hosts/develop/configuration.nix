@@ -84,7 +84,6 @@ home-manager = {
 
   ## --- System packages ---
   environment.systemPackages = with pkgs; [
-    neovim
     git
     neofetch
   ];
