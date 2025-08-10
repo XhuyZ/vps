@@ -75,11 +75,6 @@ in {
           source = "auto";
         };
       }
-      // lib.mkIf pkgs.stdenv.hostPlatform.isDarwin {
-        input = {
-          method = "portaudio";
-          source = "Background Music";
-        };
       };
     };
   };
