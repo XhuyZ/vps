@@ -10,7 +10,7 @@
     # });
   };
     nixvim-overlay = final: prev: {
-            my-neovim = inputs.xhuyz-nixvim.packages.${prev.system}.default;
+            my-neovim = inputs.my-nixvim.packages.${prev.system}.default;
             };
   # Stable package set
   stable-packages = final: _prev: {
