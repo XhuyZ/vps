@@ -34,11 +34,6 @@
           inputs.disko.nixosModules.disko
           nixos-hardware.nixosModules.asus-fx504gd
           inputs.home-manager.nixosModules.home-manager
-          {
-            home-manager.sharedModules = [
-            nixvim.homeModules.nixvim
-            ];
-          }
           ];
         };
       };
