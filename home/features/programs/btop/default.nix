@@ -9,7 +9,6 @@ with lib; let
 in {
   options.features.programs.btop.enable = mkEnableOption "enable btop";
 
-  config = mkIf cfg.enable {
     config = mkIf cfg.enable {
     programs.btop = {
       enable = true;
