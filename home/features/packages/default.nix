@@ -1,7 +1,7 @@
 {pkgs, my-nixvim, system, inputs,  ...}: {
   home.packages = with pkgs; [
     pkgs.neofetch
-    pkgs.fastfetch
+    # pkgs.fastfetch
     pkgs.pfetch
     pkgs.htop
     pkgs.btop
