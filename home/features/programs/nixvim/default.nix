@@ -6,7 +6,7 @@ in {
     lib.mkEnableOption "Enable NixVim configuration";
     
   config = lib.mkIf cfg.enable {
-    programs.nixivm.enable = true;
+    programs.nixvim.enable = true;
   };
 }
 
