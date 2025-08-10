@@ -6,6 +6,8 @@
   ./fastfetch/default.nix
   ./gh/default.nix
   ./cava/default.nix
+  ./btop/default.nix
+  ./jq/default.nix
   ];
 }
 

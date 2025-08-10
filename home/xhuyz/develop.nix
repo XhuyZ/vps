@@ -15,6 +15,8 @@
       fastfetch.enable = true;
       gh.enable = true;
       cava.enable = true;
+      btop.enable = true;
+      jq.enable = true;
     };
     wm = {
       office.enable = true;
