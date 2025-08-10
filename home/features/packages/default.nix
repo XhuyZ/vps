@@ -19,7 +19,6 @@
     pkgs.lazysql
     pkgs.dbeaver-bin
     inputs.my-nixvim.packages.${pkgs.system}.default
-    my-neovim
     ];
 }
 
