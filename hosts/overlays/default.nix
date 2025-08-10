@@ -9,10 +9,18 @@
     #   ...
     # });
   };
-nixvim-overlay = final: prev: {
-    my-nixvim = inputs.my-nixvim.packages.${prev.system}.default;
-  }; # Stable package set
-  stable-packages = final: _prev: {
+  snixvim-overlay = final: prev: {
+    my-nixvim = inputs.my-nixvim.packages.${prev.system}.default.overrideAttrs (oldAttrs: {
+      meta = (oldAttrs.meta or {}) // {
+        description = "Neovim configured with nixvim";
+        longDescription = "Custom Neovim configuration built with nixvim";
+        homepage = "https://github.com/XhuyZ/nixvim";
+        license = final.lib.licenses.mit;
+        maintainers = [ ];
+        platforms = final.lib.platforms.unix;
+      };
+    });
+  };table-packages = final: _prev: {
     stable = import inputs.nixpkgs {
       system = final.system;
       config.allowUnfree = true;
