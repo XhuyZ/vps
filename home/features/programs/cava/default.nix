@@ -10,7 +10,7 @@ in {
   options.features.programs.cava.enable = mkEnableOption "enable cava";
 
   config = mkIf cfg.enable {
-  }programs.cava = {
+  programs.cava = {
       enable = true;
       package = if pkgs.stdenv.hostPlatform.isLinux then pkgs.cava else pkgs.emptyDirectory;
 
