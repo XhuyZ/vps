@@ -5,6 +5,7 @@
   ./starship/default.nix
   ./fastfetch/default.nix
   ./gh/default.nix
+  ./cava/default.nix
   ];
 }
 
