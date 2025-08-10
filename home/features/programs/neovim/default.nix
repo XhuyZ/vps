@@ -12,7 +12,7 @@ in {
   config = mkIf cfg.enable {
     programs.neovim = {
       enable = true;
-      package = pkgs.my-neovim;
+      package = pkgs.neovim-unwrapped;
     };
   };
 }

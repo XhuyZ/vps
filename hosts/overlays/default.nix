@@ -9,12 +9,10 @@
     #   ...
     # });
   };
-  nixvim-overlay = final: prev: {
-    my-neovim = inputs.my-nixvim.packages.${prev.system}.default.overrideAttrs (old: {
-      meta = old.meta // (prev.neovim.meta or {});
-    });
-  };
-  # Stable package set
+ nixvim-overlay = final: prev: {
+  neovim-unwrapped = inputs.my-nixvim.packages.${prev.system}.default;
+};
+ # Stable package set
   stable-packages = final: _prev: {
     stable = import inputs.nixpkgs {
       system = final.system;
