@@ -7,11 +7,6 @@
     ../features/wm
     ./home.nix
   ];
-
-  nixpkgs.overlays = [
-    outputs.overlays.nixvim-overlay
-  ];
-
   features = {
     programs = {
       nushell.enable = true;
