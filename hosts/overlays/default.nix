@@ -1,19 +1,26 @@
 { inputs, ... }: {
-  # This one brings our custom packages from the 'pkgs' directory
+  # Bring custom packages from pkgs directory
   additions = final: _prev: import ../../pkgs { pkgs = final; };
 
-  # This one contains whatever you want to overlay
-  # You can change versions, add patches, set compilation flags, anything really.
-  # https://nixos.wiki/wiki/Overlays
-  modifications = final: prev:
-    {
-      # example = prev.example.overrideAttrs (oldAttrs: rec {
-      # ...
-      # });
-    };
-  nixvim-overlay = final: prev: {
-    my-neovim = inputs.my-nixvim.packages.${prev.system}.default;
+  # Overlay for modifications to existing packages
+  modifications = final: prev: {
+    # Example modification:
+    # example = prev.example.overrideAttrs (oldAttrs: rec {
+    #   ...
+    # });
   };
+
+  # Overlay for nixvim with description fallback
+  nixvim-overlay = final: prev: {
+    my-neovim = inputs.my-nixvim.packages.${prev.system}.default.overrideAttrs (old: {
+      meta = (old.meta or {}) // {
+        description = (old.meta.description or "Neovim text editor (custom nixvim build)");
+        longDescription = (old.meta.longDescription or "Neovim is a hyperextensible Vim-based text editor with custom configuration.");
+      };
+    });
+  };
+
+  # Stable package set
   stable-packages = final: _prev: {
     stable = import inputs.nixpkgs {
       system = final.system;
@@ -21,3 +28,4 @@
     };
   };
 }
+
