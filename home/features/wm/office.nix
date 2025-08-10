@@ -11,7 +11,6 @@ in {
     mkEnableOption "install office and paperwork stuff";
 
   config = mkIf cfg.enable {
-    programs.neovim.enable = true;
     home.packages = with pkgs; [
     libreoffice-fresh
     ];
