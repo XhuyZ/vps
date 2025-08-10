@@ -3,7 +3,7 @@ let
   cfg = config.features.programs.nixvim;
 in {
   imports = [
-    inputs.my-nixvim.homeManagerModules.nixvim
+    inputs.my-nixvim.homeModules.my-nixvim
   ];
 
   options.features.programs.nixvim.enable =
