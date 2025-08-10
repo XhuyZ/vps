@@ -18,7 +18,6 @@
     pkgs.starship
     pkgs.lazysql
     pkgs.dbeaver-bin
-    pkgs.my-nixvim
   ];
 }
 
