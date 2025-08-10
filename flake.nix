@@ -62,7 +62,7 @@
             nixvim.homeModules.nixvim
             ./home/xhuyz/develop.nix
             
-            # Cũng áp dụng overlay cho home-manager
+            # Áp dụng overlay cho home-manager
             ({ config, pkgs, ... }: {
               nixpkgs.overlays = [ myNixvimOverlay ];
             })
