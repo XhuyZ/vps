@@ -11,14 +11,16 @@
   };
 
   # Overlay for nixvim with description fallback
-  nixvim-overlay = final: prev: {
-    my-neovim = inputs.my-nixvim.packages.${prev.system}.default.overrideAttrs (old: {
-      meta = (old.meta or {}) // {
-        description = (old.meta.description or "Neovim text editor (custom nixvim build)");
-        longDescription = (old.meta.longDescription or "Neovim is a hyperextensible Vim-based text editor with custom configuration.");
-      };
-    });
-  };
+nixvim-overlay = final: prev: {
+  my-neovim = inputs.my-nixvim.packages.${prev.system}.default.overrideAttrs (old: {
+    meta = old.meta or {} // {
+      description = "My custom NixVim build";
+      license = prev.lib.licenses.mit;
+      maintainers = [ ];
+      platforms = prev.lib.platforms.all;
+    };
+  });
+};
 
   # Stable package set
   stable-packages = final: _prev: {
