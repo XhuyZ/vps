@@ -12,7 +12,7 @@ in {
   config = mkIf cfg.enable {
     programs.neovim = {
       enable = true;
-      package = pkgs.neovim-unwrapped;
+      package = pkgs.my-nixvim;
     };
   };
 }
