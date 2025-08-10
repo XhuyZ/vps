@@ -7,6 +7,7 @@
     ../features/wm
     ./home.nix
   ];
+  programs.nixvim.enable = true;
   features = {
     programs = {
       nushell.enable = true;
