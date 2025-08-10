@@ -40,11 +40,11 @@
         "xhuyz@develop" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages."x86_64-linux";
           extraSpecialArgs = {
-            inherit inputs outputs my-nixvim;
+            inherit inputs outputs;
             system = "x86_64-linux"; 
             }; 
           modules = [
-             my-nixvim.homeModules.my-nixvim
+             inputs.my-nixvim.homeModules.nixvim
             ./home/xhuyz/develop.nix
           ];
         };
