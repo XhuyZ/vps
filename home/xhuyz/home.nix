@@ -9,5 +9,9 @@
     EDITOR = "nvim";
   };
   programs.home-manager.enable = true;
+  programs.bash.shellAliases = {
+    nvim = "${inputs.my-nixvim.packages.${pkgs.system}.default}/bin/nvim";
+    vim = "${inputs.my-nixvim.packages.${pkgs.system}.default}/bin/nvim";
+  };
 }
 
