@@ -40,6 +40,10 @@
         "xhuyz@develop" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages."x86_64-linux";
           extraSpecialArgs = { inherit inputs outputs; };
+          pkgs = import nixpkgs {
+          system = "x86_64-linux";
+          overlays = [ self.overlays ];
+    };
           modules = [ 
              nixvim.homeModules.nixvim
             ./home/xhuyz/develop.nix
