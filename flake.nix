@@ -29,7 +29,7 @@
             system = "x86_64-linux";
           specialArgs = { inherit inputs outputs; };
           modules = [ 
-          ./hosts/laptop-thinkpad 
+          ./hosts/develop 
           inputs.disko.nixosModules.disko
           nixos-hardware.nixosModules.asus-fx504gd
           inputs.home-manager.nixosModules.home-manager
