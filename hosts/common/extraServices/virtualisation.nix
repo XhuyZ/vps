@@ -20,7 +20,7 @@ in {
           ovmf = {
             enable = true;
             packages = [
-              (pkgs.locked.OVMF.override {
+              (pkgs.OVMF.override {
                 secureBoot = true;
                 tpmSupport = true;
               })
