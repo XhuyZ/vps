@@ -38,6 +38,19 @@
           }
           ];
         };
+        laptop-asus = nixpkgs.lib.nixosSystem {    
+            system = "x86_64-linux";
+          specialArgs = { inherit inputs outputs; };
+          modules = [ 
+          ./hosts/laptop-asus
+          inputs.disko.nixosModules.disko
+          nixos-hardware.nixosModules.asus-fx504gd
+          inputs.home-manager.nixosModules.home-manager
+          {
+            home-manager.backupFileExtension = "backup";
+          }
+          ];
+        };
       };
       homeConfigurations = {
         "xhuyz@develop" = home-manager.lib.homeManagerConfiguration {
