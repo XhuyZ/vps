@@ -23,7 +23,7 @@
     in {
       packages =
         forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-      overlays = import ./hosts/overlays { inherit inputs; };
+      overlays = import ./overlays { inherit inputs; };
       nixosConfigurations = {
         develop = nixpkgs.lib.nixosSystem {    
             system = "x86_64-linux";
