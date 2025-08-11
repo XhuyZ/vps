@@ -25,11 +25,11 @@
         forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
       overlays = import ./hosts/overlays { inherit inputs; };
       nixosConfigurations = {
-        develop = nixpkgs.lib.nixosSystem {    
+        thinkpad = nixpkgs.lib.nixosSystem {    
             system = "x86_64-linux";
           specialArgs = { inherit inputs outputs; };
           modules = [ 
-          ./hosts/develop 
+          ./hosts/laptop-thinkpad 
           inputs.disko.nixosModules.disko
           nixos-hardware.nixosModules.asus-fx504gd
           inputs.home-manager.nixosModules.home-manager
@@ -66,6 +66,13 @@
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [ 
             ./home/xhuyz/laptop-asus.nix
+          ];
+        };
+        "xhuyz@laptop-thinkpad" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages."x86_64-linux";
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [ 
+            ./home/xhuyz/laptop-thinkpad.nix
           ];
         };
       };
