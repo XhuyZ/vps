@@ -102,7 +102,6 @@ home-manager = {
 
   ## --- Firewall ---
   networking.firewall.allowedTCPPorts = [ 22 ];
-  networking.hostName = "develop"; 
 
   ## --- Sudo config ---
   security.sudo.extraRules = [

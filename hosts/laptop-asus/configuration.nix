@@ -19,7 +19,7 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   ## --- Host & Time ---
-  networking.hostName = "develop";
+  networking.hostName = "laptop-asus";
   time.timeZone = "Asia/Ho_Chi_Minh";
 
   ## --- Locale ---
@@ -102,7 +102,6 @@ home-manager = {
 
   ## --- Firewall ---
   networking.firewall.allowedTCPPorts = [ 22 ];
-  networking.hostName = "laptop-asus"; 
 
   ## --- Sudo config ---
   security.sudo.extraRules = [
