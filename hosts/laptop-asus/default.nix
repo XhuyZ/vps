@@ -22,9 +22,9 @@
   ];
 
   extraServices = {
-    flatpak.enable = false;
-    ollama.enable = false;
+    flatpak.enable = true;
+    ollama.enable = true;
     podman.enable = true;
-    virtualisation.enable = false;
+    virtualisation.enable = true;
   };
 }
