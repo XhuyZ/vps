@@ -12,8 +12,9 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nixvim.url = "github:nix-community/nixvim";
     my-nixvim.url = "github:XhuyZ/nixvim";
+    agenix.url = "github:ryantm/agenix";
   };
-  outputs = { self, home-manager, nixpkgs, nixos-hardware, nixvim, my-nixvim, ... }@inputs:
+  outputs = { self, home-manager, nixpkgs, nixos-hardware, nixvim, my-nixvim, agenix, ... }@inputs:
     let
       inherit (self) outputs;
       systems = [
@@ -45,6 +46,7 @@
           ./hosts/laptop-asus
           inputs.disko.nixosModules.disko
           nixos-hardware.nixosModules.asus-fx504gd
+          agenix.nixosModules.default
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager.backupFileExtension = "backup";

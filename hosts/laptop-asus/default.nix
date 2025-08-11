@@ -21,10 +21,10 @@
     ./services
   ];
 
-  # extraServices = {
-  #   flatpak.enable = false;
-  #   ollama.enable = false;
-  #   podman.enable = true;
-  #   virtualisation.enable = false;
-  # };
+  extraServices = {
+    flatpak.enable = false;
+    ollama.enable = false;
+    podman.enable = true;
+    virtualisation.enable = false;
+  };
 }
