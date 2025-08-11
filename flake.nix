@@ -47,6 +47,13 @@
             ./home/xhuyz/develop.nix
           ];
         };
+        "xhuyz@laptop-asus" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages."x86_64-linux";
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [ 
+            ./home/xhuyz/laptop-asus.nix
+          ];
+        };
       };
     };
 }
