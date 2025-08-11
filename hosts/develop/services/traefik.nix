@@ -57,5 +57,4 @@
   };
 
   networking.firewall.allowedTCPPorts = [80 443];
-    networking.hostName = "laptop-asus"; 
 }

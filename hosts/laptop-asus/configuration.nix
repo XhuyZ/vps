@@ -102,6 +102,7 @@ home-manager = {
 
   ## --- Firewall ---
   networking.firewall.allowedTCPPorts = [ 22 ];
+  networking.hostName = "laptop-asus"; 
 
   ## --- Sudo config ---
   security.sudo.extraRules = [
