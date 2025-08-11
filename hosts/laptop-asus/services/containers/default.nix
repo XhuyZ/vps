@@ -1,6 +1,6 @@
 {
   imports = [
-    # Import some nix modules
+  ./neko.nix
   ];
 }
 
