@@ -5,14 +5,11 @@
     ./hardware-configuration.nix
     ./disko-config.nix
   ];
-
-  ## --- Flake support ---
-
   ## --- Bootloader (GRUB + UEFI only) ---
   boot.loader.grub = {
     enable = true;
     efiSupport = true;
-    devices = [ "nodev" ]; # tốt cho remote
+    devices = [ "nodev" ];
     efiInstallAsRemovable = true; # đặt file ở EFI/BOOT/BOOTX64.EFI
   };
   ## --- Kernel ---
