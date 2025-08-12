@@ -5,8 +5,6 @@
     ./hardware-configuration.nix
     ./disko-config.nix
   ];
-## FLAKE
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   ## --- Bootloader (GRUB + UEFI only) ---
   boot.loader.grub = {
