@@ -1,8 +1,8 @@
 { config, lib, pkgs, ... }:
 
 let
-  domain = "myhome"; # subdomain trên DuckDNS (không có .duckdns.org)
-  token  = "your-duckdns-token"; # token DuckDNS
+  domain = "xhuyz"; # subdomain trên DuckDNS (không có .duckdns.org)
+  token  = "16gHnv3NTjpF5ZavMi9QYBFxUkNchdicUS"; # token DuckDNS
 in
 {
   systemd.services.duckdns-update = {
