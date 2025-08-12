@@ -44,6 +44,7 @@
           specialArgs = { inherit inputs outputs; };
           modules = [ 
           ./hosts/laptop-asus
+          ./modules/duckdns.nix
           inputs.disko.nixosModules.disko
           nixos-hardware.nixosModules.asus-fx504gd
           agenix.nixosModules.default
