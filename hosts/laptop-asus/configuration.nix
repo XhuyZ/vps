@@ -99,7 +99,6 @@ home-manager = {
 
   ## --- Firewall ---
   networking.firewall.allowedTCPPorts = [ 22 8080 ];
-  networking.firewall.allowedTCPPorts6 = [ 8080 ];
 
   ## --- Sudo config ---
   security.sudo.extraRules = [
