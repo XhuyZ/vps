@@ -53,7 +53,7 @@
   };
 
   systemd.services.traefik.serviceConfig = {
-    # EnvironmentFile = ["${config.age.secrets.traefik.path}"];
+    EnvironmentFile = ["${config.age.secrets.traefik.path}"];
   };
 
   networking.firewall.allowedTCPPorts = [80 443];
