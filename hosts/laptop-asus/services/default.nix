@@ -5,6 +5,7 @@
     ./mysql.nix
     # ./traefik.nix
     ./postgres.nix
+    ./traefik.nix
   ];
 }
 
