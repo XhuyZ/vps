@@ -21,9 +21,6 @@ in
       OnUnitActiveSec = "5min";
       Unit = "duckdns-update.service";
     };
-    install = {
-      WantedBy = [ "timers.target" ];
-    };
   };
 }
 
