@@ -6,7 +6,7 @@
 {
   imports = [ ];
 
-  boot.initrd.availableKernelModules = [ "ata_piix" "mptspi" "uhci_hcd" "ehci_pci" "ahci" "sd_mod" "sr_mod" "nvme" "xhci_pci" "usbhid" ];
+  boot.initrd.availableKernelModules = ["virtio_blk" "virtio_pci" "virtio_scsi" "ata_piix" "mptspi" "uhci_hcd" "ehci_pci" "ahci" "sd_mod" "sr_mod" "nvme" "xhci_pci" "usbhid" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "iwlwifi" ];
   boot.extraModulePackages = [ ];
