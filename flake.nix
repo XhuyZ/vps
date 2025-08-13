@@ -26,11 +26,11 @@
         forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
       overlays = import ./hosts/overlays { inherit inputs; };
       nixosConfigurations = {
-        develop = nixpkgs.lib.nixosSystem {    
+        vps = nixpkgs.lib.nixosSystem {    
             system = "x86_64-linux";
           specialArgs = { inherit inputs outputs; };
           modules = [ 
-          ./hosts/develop 
+          ./hosts/vps 
           inputs.disko.nixosModules.disko
           nixos-hardware.nixosModules.asus-fx504gd
           inputs.home-manager.nixosModules.home-manager
