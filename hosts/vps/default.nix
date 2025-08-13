@@ -5,7 +5,7 @@
     ../common/extraServices
     ./configuration.nix
     ./programs.nix
-    ./secrets.nix
+    # ./secrets.nix
     ./services
   ];
 
