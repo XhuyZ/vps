@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.features.desktop.media;
+  cfg = config.features.wm.media;
 in {
-  options.features.desktop.media.enable =
+  options.features.wm.media.enable =
     mkEnableOption "enable media features";
 
   config = mkIf cfg.enable {
