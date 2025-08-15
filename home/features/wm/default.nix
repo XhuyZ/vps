@@ -5,6 +5,7 @@
    ./kdenlive.nix
    ./obs.nix
    ./dbeaver.nix
+   ./media.nix
   ];
 
 }

@@ -26,6 +26,7 @@
       kdenlive.enable = true;
       dbeaver.enable = true;
       obs.enable = true;
+      media.enable = true;
     };
   };
 }
