@@ -104,6 +104,13 @@
             ./home/xhuyz/laptop-thinkpad.nix
           ];
         };
+        "xhuyz@wsl" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages."x86_64-linux";
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [ 
+            ./home/xhuyz/wsl.nix
+          ];
+        };
       };
     };
 }
