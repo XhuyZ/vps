@@ -1,7 +1,7 @@
 { config, inputs, outputs, lib, pkgs, ... }:
 {
   imports = [
-    <nixos-wsl/modules>
+    <nixos-wsl>
   ];
   wsl.enable = true;
   wsl.defaultUser = "xhuyz";
