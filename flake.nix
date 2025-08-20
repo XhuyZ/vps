@@ -72,8 +72,6 @@
           specialArgs = { inherit inputs outputs; };
           modules = [ 
           ./hosts/wsl
-          inputs.disko.nixosModules.disko
-          nixos-hardware.nixosModules.asus-fx504gd
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager.backupFileExtension = "backup";
