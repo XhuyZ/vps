@@ -13,6 +13,7 @@
     nixvim.url = "github:nix-community/nixvim";
     my-nixvim.url = "github:XhuyZ/nixvim";
     agenix.url = "github:ryantm/agenix";
+    nixos-wsl.url = "github:nix-community/NixOS-WSL";
   };
   outputs = { self, home-manager, nixpkgs, nixos-hardware, nixvim, my-nixvim, agenix, ... }@inputs:
     let
@@ -73,6 +74,7 @@
           modules = [ 
           ./hosts/wsl
           inputs.home-manager.nixosModules.home-manager
+          inputs.nixos-wsl.nixosModules.wsl
           {
             home-manager.backupFileExtension = "backup";
           }
