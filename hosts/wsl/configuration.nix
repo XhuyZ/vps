@@ -1,8 +1,5 @@
 { config, inputs, outputs, lib, pkgs, ... }:
 {
-  imports = [
-    <nixos-wsl>
-  ];
   wsl.enable = true;
   wsl.defaultUser = "xhuyz";
   ## --- Host & Time ---
